@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}{{ SITE_NAME }} | {{ SITE_LEAD }}{% endblock %}
+{% block page %}
+
+	<!-- Masthead
+	=========================================== --> 
+	<div id="masthead"> 
+		<div class="inner"> 
+			<div class="container">
+				<h1>{{ SITE_NAME }}</h1> 
+				<p class="lead"> 
+					{{ SITE_LEAD }}<br/>
+				</p> 
+			</div>
+		</div> 
+	</div> 
+
+	<!-- Page Content
+	============================================ -->
+	<div class="container">
+		<div class="row">
+			<div class="span4 columns">
+				<div id="index-left">
+					<div id="intro">
+						<div style="width:120px; height:120px; border:4px solid #bbb; border-radius:240px; 
+									background: url('http://www.gravatar.com/avatar/b5fba2f517d483b266ccd6d7a37d3a2c');
+									background-size:100% 100%; 
+									background-repeat: no-repeat;
+									margin-bottom: 10px; padding: 1px;">
+						</div>
+						<p class="lead">
+							I'm Chris.  A real-time embedded software engineer.
+							I'm interested in web and mobile app development, 
+							networking, and all things 
+							<a href="http://python.org/">Python</a> or <a href="http://www.apple.com/">Apple</a>.
+						</p>
+						<p class="lead">
+							Read <a href="{{ ROOT_URL }}/about.html">more about me.</a>
+						</p>
+					</div>
+					<h3>Contact</h3>
+					<a href="mailto:ckridgway@gmail.com">ckridgway@gmail.com</a><br/>
+
+					<h3>Social</h3>
+					<a href="http://twitter.com/cridgway">Twitter</a><br/>
+					<a href="https://plus.google.com/114382913609569476532">Google+</a><br/>
+					<a href="http://www.linkedin.com/in/ckridgway">LinkedIn</a><br/>
+					<a href="http://www.delicious.com/cridgway">Delicious</a><br/>
+					
+					<h3>Sharing</h3>
+					<a href="https://bitbucket.org/ckridgway">Bitbucket</a><br/>
+					<a href="https://github.com/ckridgway">GitHub</a><br/>
+				</div>
+			</div>
+			<div class="span12 columns">
+				<div id="index-right">
+					<div class="inner">
+					<div class="row">
+						<!-- Latest Posts
+						============================================ -->
+						<div class="span6 columns">
+						<h2>Latest Posts</h2>
+						
+						<ul>
+						{% for post in POST_LISTING|slice:"10" %}
+							<li><a href="{{ ROOT_URL}}/{{ post.page }}">{{ post.title }} </a></li>
+						{% empty %}
+							<li>There are currently no postings.</li>
+						{% endfor %}
+						</ul>
+						
+						<a class="indent" href="{{ ROOT_URL }}/archives.html">All Posts Archive</a>
+						
+						</div>
+
+						<!-- Twitter Widget
+						============================================= -->
+						<div class="span6 columsn">
+						<h2>Twitter</h2>
+						<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+						<script>
+							new TWTR.Widget({
+							  version: 2,
+							  type: 'profile',
+							  rpp: 5,
+							  interval: 30000,
+							  width: 330,
+							  height: 400,
+							  theme: {
+							    shell: {
+							      background: 'transparent',
+							      color: '#000000'
+							    },
+							    tweets: {
+							      background: '#transparent',
+							      color: '#000000',
+							      links: '#006E91'
+							    }
+							  },
+							  features: {
+							    scrollbar: false,
+							    loop: false,
+							    live: false,
+							    hashtags: true,
+							    timestamp: false,
+							    avatars: true,
+							    behavior: 'all'
+							  }
+							}).render().setUser('cridgway').start();
+						</script>						
+						</div>
+						</div>
+					</div>
+					<!-- Elsewhere
+					=========================================== -->
+					<div id="projects">
+						<h2>Projects</h2>
+						<div class="inner">
+							<p>Place holder for future projects.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+  

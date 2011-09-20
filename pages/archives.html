@@ -1,0 +1,12 @@
+{% extends "article.html" %}
+{% block title %}Archives{% endblock %}
+{% block content %}
+<h1>Archives</h1>
+	<ul class="archive-list">
+	{% for post in POST_LISTING %}
+		<li class="archive-list-item">{{ post.datetime|date:"Y-d-m" }}: <a href="{{ ROOT_URL }}/{{ post.page }}">{{ post.title }} </a></li>
+	{% empty %}
+		<li>There are currently no postings.</li>
+	{% endfor %}
+	</ul>
+{% endblock %}
