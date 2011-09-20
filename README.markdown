@@ -14,6 +14,8 @@ Requirements
  * [Cactus][]
  * [Markdown](http://www.freewisdom.org/projects/python-markdown/)
 
+To install the needed tools:
+
 	curl https://raw.github.com/koenbok/Cactus/master/install.sh | sh
 	sudo pip install markdown
 
