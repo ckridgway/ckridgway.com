@@ -10,12 +10,12 @@ content.
 Requirements
 ------------
 
- * [Python][]
+ * [Python](http://python.org/)
  * [Cactus][]
  * [Markdown](http://www.freewisdom.org/projects/python-markdown/)
 
- 	curl https://raw.github.com/koenbok/Cactus/master/install.sh | sh
- 	sudo pip install markdown
+    curl https://raw.github.com/koenbok/Cactus/master/install.sh | sh
+    sudo pip install markdown
 
 Nods to other tools used to develop this:
 
