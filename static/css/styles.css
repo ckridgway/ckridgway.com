@@ -40,14 +40,30 @@ a, a.visited {color: #006E91; }
 Index page
 -----------------------------------------------
 */
-#masthead { text-align: center; margin: 20px; }
-#masthead h1 { font-family: 'Voltaire', sans-serif; font-size: 48pt; text-transform:uppercase; color:#006E91 ;}
+#masthead { text-align: center; margin: 20px 20px 30px 20px; }
+#masthead h1 { 
+	font-family: 'Voltaire', sans-serif; 
+	font-size: 48pt;
+	text-transform:uppercase; 
+	color:#006E91;
+	line-height: 48pt;
+	margin: 5px 0px 5px 0px;
+}
 #masthead h2 { text-transform:uppercase; }
-#masthead div.inner { padding: 20px 0px 10px 0px}
-#masthead p.lead { font-size: 14pt; font-style:italic; color: gray;}
+#masthead p.lead { 
+	font-size: 14pt; 
+	font-style:italic; 
+	color: gray;
+	line-height: 14pt;
+}
 
 #index-left { margin-right: 24px; }
-#index-left h3 { border-bottom: 1px solid #BBB; line-height:22px; margin-top:12px; margin-bottom:5px;}
+#index-left h3 { 
+	border-bottom: 1px solid #BBB; 
+	line-height:22px; 
+	margin-top:12px; 
+	margin-bottom:5px;
+}
 #index-left p.lead { font-size: 11pt;}
 
 #index-right h2 { 
