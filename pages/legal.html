@@ -1,31 +1,33 @@
-{% extends "article.html" %}
+{% extends "page.html" %}
 {% block title %}Legal Terms{% endblock %}
 {% block content %}
-{% markdown %}
+
+{% load markup %}
+{% filter markdown %}
 
 Legal
 =====
 ### Privacy ##
-I do not share personal information with third-parties except as needed to 
-support Disqus comments and Google Analytics.  I am not responsible for the 
-republishing of the content found on this blog on other Web sites or media 
+I do not share personal information with third-parties except as needed to
+support Disqus comments and Google Analytics.  I am not responsible for the
+republishing of the content found on this blog on other Web sites or media
 without permission.
 
 ### Blog Comments ##
-I reserve the right to edit or delete any comments submitted to this blog for 
-any reason and without notice.  Don't spam, troll, attack, swear, or post 
+I reserve the right to edit or delete any comments submitted to this blog for
+any reason and without notice.  Don't spam, troll, attack, swear, or post
 illegal or offensive material.
 
 ### Terms and Conditions ##
 All content provided on this blog is for informational purposes only. I make no
-representations as to the accuracy or completeness of any information on this 
-site or found by following any link on this site.  I will not be liable for any 
-errors or omissions in this information nor for the availability of this 
-information. I will not be liable for any losses, injuries, or damages from the 
+representations as to the accuracy or completeness of any information on this
+site or found by following any link on this site.  I will not be liable for any
+errors or omissions in this information nor for the availability of this
+information. I will not be liable for any losses, injuries, or damages from the
 display or use of this information.
 
 This policy is subject to change at anytime.
 
-{% endmarkdown %}
+{% endfilter %}
 {% endblock %}
 

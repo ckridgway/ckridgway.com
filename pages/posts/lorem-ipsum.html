@@ -1,7 +1,12 @@
-Title: Lorem Ipsum
-Authors: Chris Ridgway
-Date: 2011/09/16 22:20:00
+title: Lorem Ipsum
+author: Chris Ridgway
+date: 16-09-2011
 
+{% extends "blog.html" %}
+{% block blog %}
+
+{% load markup %}
+{% filter markdown:"codehilite,footnotes" %}
 
 Second Heading
 --------------
@@ -12,6 +17,7 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+Footnotes[^1] have a label[^label] and a definition[^!DEF].
 
 ## Second Heading ##
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -59,3 +65,10 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+[^1]: This is a footnote
+[^label]: A footnote on "label"
+[^!DEF]: The definition of a footnote.
+
+{% endfilter %}
+{% endblock %}

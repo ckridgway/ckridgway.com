@@ -1,14 +1,16 @@
-{% extends "article.html" %}
+{% extends "page.html" %}
 {% block title %}About Chris Ridgway{% endblock %}
 {% block content %}
-{% markdown %}
+
+{% load markup %}
+{% filter markdown %}
 
 About
 =====
 I'm an embedded real-time Software Engineer living in Iowa.  I've been developing
-software for over fifteen years.  I attended the [University of Iowa][UofI] 
-for [Computer Science][CompSci].  [Go Hawks!][GoHawks]  In my free time I have a 
-myriad of interests, most revolving around computing.  Right now my hot topic interests 
+software for over fifteen years.  I attended the [University of Iowa][UofI]
+for [Computer Science][CompSci].  [Go Hawks!][GoHawks]  In my free time I have a
+myriad of interests, most revolving around computing.  Right now my hot topic interests
 are:
 
  * Web programming
@@ -16,24 +18,24 @@ are:
  * Large scale computing
  * Networking
  * [DNA analysis][23andMe] in Python
- * [Genetic Algorithms][pyEvolve] 
+ * [Genetic Algorithms][pyEvolve]
  * All things [Python][]
- * All things [Apple][].  
+ * All things [Apple][].
 
 I primarily work in C++, but I prefer to work in [Python][]
 when possible and it makes sense.  I've worked with a number of other languages,
 but these are my main languages right now.
 
-This site is my way of participating in the greater internet community by sharing 
-my thoughts and ideas, and documenting things I've learned so others don't have 
+This site is my way of participating in the greater internet community by sharing
+my thoughts and ideas, and documenting things I've learned so others don't have
 to struggle with the same things.  We all stand on the shoulders of those before
 us, maybe this site can provide a tidbit of information for someone to stand on.
 
 ### Disclaimer ##
-This site is my personal site.  The posts on this site reflect my own personal 
+This site is my personal site.  The posts on this site reflect my own personal
 opinion, not those of my employers (past, present or future).
 
-Additionally, the information provided on this website is AS-IS and I make no 
+Additionally, the information provided on this website is AS-IS and I make no
 warranty of any kind about it.  See [Legal](legal.html) for more details.
 
 
@@ -45,6 +47,6 @@ warranty of any kind about it.  See [Legal](legal.html) for more details.
 [Apple]: http://www.apple.com/ "Apple"
 [pyEvolve]: http://pyevolve.sourceforge.net/ "Pyevolve"
 
-{% endmarkdown %}
+{% endfilter %}
 {% endblock %}
 

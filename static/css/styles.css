@@ -5,7 +5,7 @@ Bootstrap styles.
 -----------------------------------------------
  */
 html, body {
-	background: url("/static/images/whitey.png");
+	background: url("/static/img/whitey.png");
 }
 
 html, body, li, ul, a, p {
@@ -253,7 +253,7 @@ Code Hiliting
 -----------------------------------------------
  */
 div.codehilite pre {
-	background-color: transparent; 
+	background-color: transparent;
 }
 
 /* Pygments - manni */

@@ -1,21 +1,23 @@
-{% extends "article.html" %}
-{% block title %}About Chris Ridgway{% endblock %}
+{% extends "page.html" %}
+{% block title %}About This Site{% endblock %}
 {% block content %}
-{% markdown %}
+
+{% load markup %}
+{% filter markdown %}
 
 Colophon
 ========
 This site is:
 
  * Edited in [Sublime Text 2][]
- * Statically generated and deployed by [Cactus][]  
- * Previewed and debuged in [Chrome][] 
- * Hosted and served from [Amazon S3][] 
+ * Statically generated and deployed by [Cactus][]
+ * Previewed and debuged in [Chrome][] and [Safari][]
+ * Hosted and served from [Amazon S3][]
  * Styled using [Bootstrap][] CSS
  * Revision controlled at [Bitbucket][] using [Mercurial][]
 
 Shout outs to:
- 
+
  * The [Django Project][Django] which Cactus relies on for its template engine
  * [Python][] which Django, Cactus, and I rely on every day
  * [Subtle Patterns][] for the background
@@ -29,6 +31,7 @@ Shout outs to:
 [Bootstrap]: http://twitter.github.com/bootstrap/ "Twitter Bootstrap"
 [Sublime Text 2]: http://www.sublimetext.com/2 "Sublime Text 2"
 [Chrome]: http://www.google.com/chrome "Google Chrome"
+[Safari]: http://www.apple.com/safari/ "Apple Safari"
 [Python]: http://python.org/ "Python"
 [Bitbucket]: https://bitbucket.org "Bitbucket"
 [Mercurial]: http://mercurial.selenic.com/ "Mercurial"
@@ -36,5 +39,5 @@ Shout outs to:
 [Werner Vogels]: http://www.allthingsdistributed.com/ "All Things Distributed"
 [NoServer]: http://www.allthingsdistributed.com/2011/08/Jekyll-amazon-s3.html "No Server Required"
 
-{% endmarkdown %}
+{% endfilter %}
 {% endblock %}
