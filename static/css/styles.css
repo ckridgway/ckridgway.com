@@ -125,7 +125,7 @@ Sidebar
 */
 
 .sidebar {
-	margin: 20px 10px 10px 10px;
+	margin: 20px 10px 10px 0;
 }
 
 .sidebar h1 {
@@ -188,7 +188,6 @@ div#projects {
 }
 
 
-/*
 #error {
 	margin-top: 10px;
 }
@@ -210,7 +209,6 @@ div#projects {
 #error a.indent {
 	padding-left: 10px;
 }
-*/
 
 /*
 -----------------------------------------------
