@@ -6,59 +6,59 @@
 
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function() {
-			
+
 			// Add the missing url to the text
 			$("#url").text(window.location.pathname);
-			
+
 			// Fix the css locations dynamically
 			$("head link").each(function() {
 				for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
 					$(this).attr("href", "../" + $(this).attr("href"));
 			});
-			
+
 		})
 	</script>
 
 	<!-- Masthead
-	=========================================== --> 
-	<div id="masthead"> 
-		<div class="inner"> 
+	=========================================== -->
+	<div id="masthead">
+		<div class="inner">
 			<div class="container">
-				<h1>Chris Ridgway</h1> 
-				<p class="lead"> 
+				<h1>Chris Ridgway</h1>
+				<p class="lead">
 					There's a wrong way, a right way, and <em> The Ridgway</em><br/>
-				</p> 
+				</p>
 			</div>
-		</div> 
-	</div> 
+		</div>
+	</div>
 
 	<!-- Error
 	============================================ -->
 	<div class="container">
 		<div class="row">
-			<div class="span4 columns">
+			<div class="span2 columns">
 			&nbsp;
 			</div>
 			<div class="span8 columns">
 				<div id="error" align="center">
-					<div style="width:120px; height:120px; border:4px solid #bbb; border-radius:240px; 
+					<div style="width:120px; height:120px; border:4px solid #bbb; border-radius:240px;
 								background: url('http://www.gravatar.com/avatar/b5fba2f517d483b266ccd6d7a37d3a2c');
-								background-size:100% 100%; 
+								background-size:100% 100%;
 								background-repeat: no-repeat;
 								margin-bottom: 10px; padding: 1px;">
 					</div>
-				
+
 					<h2>Well that's weird!</h2>
 					<p>
-						The page <b id="url"></b> you were looking for 
+						The page <b id="url"></b> you were looking for
 						could not be found on this server.<br/>
 					</p>
 					<p>
-						Maybe one of the following articles would be of 
+						Maybe one of the following articles would be of
 						interest.<br/>
 					</p>
-					
-					
+
+
 					<ul>
 						{% for post in POST_LISTING|slice:"10" %}
 							<li><a href="{{ ROOT_URL}}/{{ post.page }}">{{ post.title }} </a></li>
@@ -66,15 +66,21 @@
 							<li>There are currently no postings.</li>
 						{% endfor %}
 					</ul>
-						
+
 					<br/>
 					<br/>
 					<a class="indent" href="{{ ROOT_URL }}/archives.html">All Posts Archive</a>
 				</div>
 			</div>
-			<div class="span4 columns">
+			<div class="span2 columns">
 				&nbsp;
 			</div>
 		</div>
 	</div>
+
+<br/>
+<br/>
+<a href="{{ ROOT_URL }}/index.html">← Back to the homepage</a>
+<br/>
+<br/>
 {% endblock %}

@@ -10,10 +10,26 @@ html, body {
 
 html, body, li, ul, a, p {
 	font-family: 'Gentium Basic', Georgia, serif;
+	font-size: 12pt;
 	color: #222;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+	font-family: 'Gentium Basic', Georgia, sans-serif;
+	font-size: 24px;
+	line-height: 32px;
+	background-color: #484746;
+	color: #FCB500;
+	padding-left: 12px;
+	margin: 10px 0 10px 0;
+
+	-webkit-border-radius: .25em;
+	-khtml-border-radius: .25em;
+	-moz-border-radius: .25em;
+	border-radius: .25em;
+}
+
+h2, h3, h4, h5, h6 {
 	font-family: 'Voltaire', sans-serif;
 	color: #222;
 }
@@ -22,8 +38,28 @@ body {
 	position: relative;
 }
 
-a, a.visited {
+a, .visited {
 	color: #006E91;
+}
+
+p.postdate {
+	font-style: italic;
+	color: #888;
+	margin-top: 5px;
+}
+
+.latest-posts ul {
+	list-style-type: none;
+	margin-left: 0;
+	padding-right: 10px;
+}
+
+.latest-posts li {
+	border-bottom: 1px solid #CCC;
+}
+
+.latest-posts a {
+	padding-left: 10px;
 }
 
 .imgcenter {
@@ -32,17 +68,20 @@ a, a.visited {
 	margin-right: auto;
 }
 
-#footer div.container {
+.footer .container {
 	border-top: 1px solid #CCC;
 	margin-top: 10px;
+	padding: 10px;
 }
 
-#footer p {
+.footer p {
 	font-style: italic;
 	text-align: center;
+	font-size: 10pt;
+	color: gray;
 }
 
-#footer a {
+.footer a {
 	font-size: 10pt;
 }
 
@@ -51,83 +90,96 @@ a, a.visited {
 Index page
 -----------------------------------------------
  */
-#masthead {
+.hero-unit {
+	background-color: transparent;
+	padding: 0 0 0 0;
+	margin: 30px 0 30px 0;
 	text-align: center;
-	margin: 20px 20px 30px 20px;
 }
 
-#masthead h1 {
+.hero-unit h1 {
+	background-color: transparent;
 	font-family: 'Voltaire', sans-serif;
 	font-size: 48pt;
 	text-transform: uppercase;
 	color: #006E91;
 	line-height: 48pt;
-	margin: 5px 0px 5px 0px;
+	margin: 0 0 5px 0;
 }
 
-#masthead h2 {
+.hero-unit h2 {
 	text-transform: uppercase;
 }
 
-#masthead p.lead {
+.hero-unit p.lead {
 	font-size: 14pt;
 	font-style: italic;
 	color: gray;
 	line-height: 14pt;
 }
 
-#index-left {
-	margin-right: 24px;
+/*
+-----------------------------------------------
+Sidebar
+-----------------------------------------------
+*/
+
+.sidebar {
+	margin: 20px 10px 10px 10px;
 }
 
-#index-left h3 {
+.sidebar h1 {
+	background-color: transparent;
+	font-family: 'Voltaire', sans-serif;
+	font-size: 18pt;
+	text-transform: uppercase;
+	color: #006E91;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.sidebar p, .sidebar a{
+	font-size: 10pt;
+}
+
+.sidebar h2 {
+	font-size: 18px;
 	border-bottom: 1px solid #BBB;
 	line-height: 22px;
 	margin-top: 12px;
 	margin-bottom: 5px;
 }
 
-#index-left p.lead {
-	font-size: 11pt;
+.sidebar-links {
+	margin-top: 30px;
 }
 
-#index-right h2 {
-	font-family: 'Gentium Basic', Georgia, sans-serif;
-	background-color: #484746;
-	color: #FCB500;
-	padding-left: 10px;
-
-	-webkit-border-radius: .25em;
-	-khtml-border-radius: .25em;
-	-moz-border-radius: .25em;
-	border-radius: .25em;
+.sidebar-links a {
+	font-size: 12pt;
 }
 
-/* #index-right div.inner { height: 400px;} */
-#index-right ul {
-	list-style-type: none;
-	margin-left: 10px;
-	padding-right: 10px;
-}
 
-#index-right li {
-	border-bottom: 1px solid #CCC;
-}
+/*
+-----------------------------------------------
+Projects
+-----------------------------------------------
+*/
 
-#index-right a.indent {
-	padding-left: 10px;
-}
-
-#projects div {
+div#projects {
 	margin-left: 2px;
-	padding-right: 10px;
+	padding: 10px 10px;
 }
 
 #projects p {
 	font-size: 11pt;
 }
 
-#projects img.thumbnail {
+#projects img {
+	max-width: 90px;
+}
+
+.thumbnail {
+	padding: 0;
 	-webkit-border-radius: .25em;
 	-khtml-border-radius: .25em;
 	-moz-border-radius: .25em;
@@ -135,65 +187,8 @@ Index page
 	border: 5px solid #484746;
 }
 
+
 /*
------------------------------------------------
-Article Pages
------------------------------------------------
- */
-#article-left {
-	margin-right: 40px;
-}
-
-#article-left a.tinylink {
-	font-size: 10pt;
-}
-
-#article-masthead div {
-	margin-top: 10px;
-}
-
-#article-masthead h1 {
-	font-family: 'Voltaire', sans-serif;
-	font-size: 18pt;
-	text-transform: uppercase;
-	color: #006E91;
-	text-align: center;
-}
-
-#article-masthead p.lead {
-	font-size: 8pt;
-	font-style: italic;
-	color: gray;
-}
-
-#article {
-	margin-top: 10px;
-}
-
-#article p, ul, li, a {
-	font-size: 12pt;
-}
-
-#article h1 {
-	font-family: 'Gentium Basic', Georgia, sans-serif;
-	font-size: 18pt;
-	background-color: #484746;
-	color: #FCB500;
-	padding-left: 10pt;
-	margin-bottom: 8px;
-
-	-webkit-border-radius: .25em;
-	-khtml-border-radius: .25em;
-	-moz-border-radius: .25em;
-	border-radius: .25em;
-}
-
-#article p.postdate {
-	font-style: italic;
-	color: #888;
-	margin-top: 5px;
-}
-
 #error {
 	margin-top: 10px;
 }
@@ -215,13 +210,14 @@ Article Pages
 #error a.indent {
 	padding-left: 10px;
 }
+*/
 
 /*
 -----------------------------------------------
 Twitter
 -----------------------------------------------
  */
-div#twtr-doc {
+#twtr-doc {
 	width: auto;
 }
 
@@ -252,7 +248,7 @@ div#twtr-doc {
 Code Hiliting
 -----------------------------------------------
  */
-div.codehilite pre {
+.codehilite pre {
 	background-color: transparent;
 }
 

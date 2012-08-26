@@ -5,9 +5,13 @@
 
 <h1>{{ title }}</h1>
 
-<p class="postdate">Posted {{ date|date:"l, F dS, Y" }}</p><br/>
+<p class="postdate">Posted {{ date|date:"l, F dS, Y" }}</p>
 
 {% block blog %}
 
 {% endblock %}
+&nbsp;<br/>
+<a href="{{ ROOT_URL }}/index.html">← Back to the homepage</a>
+&nbsp;<br/>
+&nbsp;<br/>
 {% endblock %}

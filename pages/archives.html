@@ -2,11 +2,18 @@
 {% block title %}Archives{% endblock %}
 {% block content %}
 <h1>Archives</h1>
-	<ul class="archive-list">
-	{% for post in posts %}
-		<li class="archive-list-item">{{ post.date|date:"Y-d-m" }}: <a href="{{ ROOT_URL }}/{{ post.path }}">{{ post.title }} </a></li>
-	{% empty %}
-		<li>There are currently no postings.</li>
-	{% endfor %}
-	</ul>
+
+<ul class="archive-list">
+{% for post in posts %}
+	<li class="archive-list-item">{{ post.date|date:"Y-d-m" }}: <a href="{{ ROOT_URL }}/{{ post.path }}">{{ post.title }} </a></li>
+{% empty %}
+	<li>There are currently no postings.</li>
+{% endfor %}
+</ul>
+
+<br/>
+<br/>
+<a href="{{ ROOT_URL }}/index.html">← Back to the homepage</a>
+<br/>
+<br/>
 {% endblock %}

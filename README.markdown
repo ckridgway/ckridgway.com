@@ -7,6 +7,7 @@ Site Generator (SSG) which uses [Django][] templates and deploys the site to
 Feel free to use the code in your blog, but please do not copy the blog 
 content.
 
+
 Requirements
 ------------
 
@@ -16,7 +17,7 @@ Requirements
 
 To install the needed tools:
 
-	curl https://raw.github.com/koenbok/Cactus/master/install.sh | sh
+	sudo easy_install https://github.com/koenbok/Cactus/zipball/master
 	sudo pip install markdown
 
 Nods to other tools used to develop this:
