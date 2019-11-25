@@ -2,7 +2,7 @@
 
 My Site
 =======
-This is the source for my [site][Site]. It's mostly for linking important accounts together. This site is deployed via [Netlify][Netlify].  
+This is the source for [www.ckridgway.com][Site]. It's mostly for linking important accounts together. This site is deployed via [Netlify][Netlify].  
 
-[Site]: http://www.ckridgway.com/ "Chris Ridgway's Blog"
+[Site]: https://www.ckridgway.com/ "Chris Ridgway's Site"
 [Netlify]: https://netlify.com "Netlify"
